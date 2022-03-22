@@ -25,7 +25,28 @@ hallway = Room("""
 	A very long hallway in the big Spacecraft
 	""")
 
+quarters = Room("""
+	4 diffrent rooms in one big room
+	""")
 
+mess_hall = Room("""
+	Where people gather in a room or building to eat together
+	""")
+
+escape_pods = Room("""
+	This is needed if your spacecraft is about to blow up or your 
+	losing oxygen or something else bad has happened
+	""")
+
+
+
+@when ("go DIRECTION")
+def travel(direction):
+	global current_room
+	if direction in current_room.exits():
+		current_room = current_room.exit(direction)
+		print(f"You go {direction}.")
+		print(current_room)
 
 
 
