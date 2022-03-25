@@ -7,7 +7,7 @@ space = Room("""
 	its airlock open and waiting.
 	""")
 
-spacecraft	= Room("""
+airlock	= Room("""
 	The bridge of the spaceship is shiny and white, with thousands 
 	of small, red, blinking lights.
 	""")
@@ -37,6 +37,25 @@ escape_pods = Room("""
 	This is needed if your spacecraft is about to blow up or your 
 	losing oxygen or something else bad has happened
 	""")
+
+bridge = Room("""
+	For people to walk on when there is a big river or some big hole
+	""")
+
+Item.description = ""
+
+knife = Item("a dirty knife","knife")
+knife.descrition = "the knife has a dull sheen to it but it looks rather sharp."
+
+red_keycard = Item("a red keycard","keycard","red card","red card")
+red_keycard.descrition = "it's a red keycard. It probably opens a door or locker."
+
+
+screw_driver = Item("a rusty screw driver","a clean screw driver")
+screw_driver.descrition = "it's a screw driver it probably opens a hatch to the engine room"
+
+
+torch = Item("")
 
 
 
@@ -72,7 +91,16 @@ def enter_spaceship():
 	
 
 
-
+spaceship.east = hallway
+spaceship.south = quarters
+hallway.east == bridge
+hallway.north = cargo
+quarters.east = mess_hall
+mess_hall.north = hallway
+hallway.north = cargo
+cargo.east = docking
+bridge.south = escape_pods
+quarters.south = airlock
 
 
 
