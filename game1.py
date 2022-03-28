@@ -55,7 +55,9 @@ screw_driver = Item("a rusty screw driver","a clean screw driver")
 screw_driver.descrition = "it's a screw driver it probably opens a hatch to the engine room"
 
 
-torch = Item("")
+torch = Item("a wet piece of wood that needs to be dry to light on fire","wood is now dry because you left it in your backpack")
+torch.descrition = "it's a peice of wood that you found can now turn into a torch that can be used to light up the room"
+
 
 
 
