@@ -1,4 +1,18 @@
 from adventurelib import *
+Room.items = Bag()
+
+
+mess_hall.items.add(red_keycard)
+cargo.items.add(knife)
+hallway.items.add(torch/wood)
+quarters.items.add(screw_driver)
+
+
+
+
+
+
+
 
 
 space = Room("""
@@ -73,6 +87,8 @@ def travel(direction):
 
 
 current_room = space
+inventory = Bag()
+
 
 @when("enter airlock")
 @when("enter spaceship")
@@ -110,8 +126,7 @@ quarters.south = airlock
 
 
 
-#Hallway = Room
-#Puzzle Room = Room 
+
 
 
 
